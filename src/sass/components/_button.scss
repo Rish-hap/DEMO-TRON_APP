@@ -1,0 +1,139 @@
+
+.btn_class {
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-decoration: none;
+      outline: none !important;
+      padding: .5rem 1.8rem;
+      border-radius: .5rem;
+      display: inline-block;
+      transition: all .2s;
+   
+    
+      backface-visibility: hidden;
+      position: relative;
+      animation-name: moveInButton;
+      animation-timing-function: ease;
+      animation-duration: 0.4s;  
+  &:active {
+    outline: none;
+  }
+  &--black {
+    background-color: $color-grey;
+    color: $color-white !important;
+    border: 1px solid $color-grey;
+  }
+  &--white {
+      background-color: $color-white;
+      color: $color-black !important;
+      border: 1px solid $color-black;
+  }
+  &--light-blue {
+    background-color: $color-light-blue;
+    color: $color-black !important;
+}
+  &--red {
+    background-color: $color-red;
+    color: $color-white !important;
+    border: none !important;
+}
+  &--dark_blue {
+    background: linear-gradient(-45deg, $color-primary-blue, $color-primary-dark-blue);
+}
+  &:hover{
+      transform: translateY(-.3rem);
+      box-shadow: 0 1rem 2rem rgba($color-black,.2);
+  }
+  &:active{
+      transform: translateY(-1px);
+      box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+  }
+  &:after {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 100px;
+      position:absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all .4s;
+  }
+  &--white::after{
+      background-color: $color-white;
+  }
+  &:hover::after{
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+  }
+  
+  &--animated{
+      animation: moveInButton 0.2s ease-out .7s;
+      animation-fill-mode: backwards;
+  }
+  }
+
+  .btn-text{
+      &:link,
+      &:visited{
+        color:$color-primary;
+        display: inline-block;
+        text-decoration: none;
+        font-size: $default-font-size;
+        border-bottom: 1px solid $color-primary;
+        padding: 3px;
+      }
+      &:hover {
+            background-color: $color-primary;
+            color:$color-white;
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+            transform:translateY(-2px);
+      }
+      &:active{
+        box-shadow: 0 .5rem 1rem rgba($color-black, 0.15);
+        transform:translateY(-2px);
+      }
+  }
+  
+
+
+  // ------------- loading spinner -------------
+
+$loadingSpinnerDiameter: 3rem;
+$loadingSpinnerStrokeWidth: .3rem;
+$loadingSpinnerStrokeColor: #FFF;
+$loadingSpinnerOpacity: .8;
+$loadingSpinnerStrokeStyle: solid; // solid, dashed, dotted
+$loadingSpinnerSpeed: 1s;
+
+.loadingSpinner {
+  border: $loadingSpinnerStrokeWidth $loadingSpinnerStrokeStyle $loadingSpinnerStrokeColor;
+  border-top-color: rgba(0, 0, 0, 0);
+  border-left-color: rgba(0, 0, 0, 0);
+  width: $loadingSpinnerDiameter - ($loadingSpinnerStrokeWidth * 2);
+  height: $loadingSpinnerDiameter - ($loadingSpinnerStrokeWidth * 2);
+  opacity: $loadingSpinnerOpacity;
+  border-radius: 50%;
+  animation: loadingSpinner $loadingSpinnerSpeed infinite linear;
+  -webkit-animation: loadingSpinner $loadingSpinnerSpeed infinite linear;
+}
+
+span.loadingSpinner {
+  margin-top: (-$loadingSpinnerDiameter / 2) + .3rem;
+  margin-left: -$loadingSpinnerDiameter / 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+@keyframes loadingSpinner {
+    from { transform: rotate(0deg)   }
+    to   { transform: rotate(360deg) }
+}
+
+@-webkit-keyframes loadingSpinner {
+    from { -webkit-transform: rotate(0deg)   }
+    to   { -webkit-transform: rotate(360deg) }
+}

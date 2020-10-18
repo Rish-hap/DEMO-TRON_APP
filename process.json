@@ -1,0 +1,21 @@
+{
+    "apps": [
+      {
+        "name": "ether-tree-user",
+        "script": "scripts/start.js",
+        "exec_mode": "cluster_mode",
+        "instances": 2,
+        "autorestart": true,
+        "watch": false,
+        "time": true,
+        "env": {
+          "PORT": 7011,
+          "NODE_ENV": "production"
+        },
+        "env_production": {
+          "PORT": 7011,
+          "NODE_ENV": "production"
+        }
+      }
+    ]
+  }

@@ -1,0 +1,33 @@
+.row_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 2rem;
+    align-items: center;
+    padding: .6rem;
+}
+.row_item_3 {
+    display: flex;
+    flex: 1 1 30%;
+}
+.row_item_2 {
+    flex: 1 1 20%;
+}
+
+.row_input {
+    background: transparent;
+    max-width: 5rem;
+    border-radius: .3rem;
+    box-sizing: border-box;
+    outline: none;
+}
+.red_color {
+    color: $color-red;
+    margin-right: 1rem;
+}
+
+.table_wrap .row_wrapper:nth-child(even) { 
+    background-color:  $light-blue;
+} 
+.row_item_1 {
+    flex: 1 1 15%;
+}

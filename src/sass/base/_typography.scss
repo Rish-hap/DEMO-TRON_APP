@@ -1,0 +1,148 @@
+
+
+.heading-primary{
+    color: $color-black;
+    /* backfaace visibility is used to remove the shaky animation */
+    backface-visibility: hidden;
+    margin-bottom: 1rem;
+    
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+     &--main {
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        display: block;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        
+        /* animation-delay: 2s;
+          animation-iteration-count: 3;
+        */
+      }
+      &--section_heading {
+        font-size: 2rem;
+        display: block;
+        font-weight: bold;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        position: relative;
+        animation-timing-function: ease-in;
+        margin-bottom: 2rem;
+      }
+
+      &--red_color_heading{
+        font-size: 1rem;
+        display: block;
+        color: $color-red;
+        font-weight: bold;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        position: relative;
+        animation-timing-function: ease-in;
+        margin-bottom: 1.5rem;
+      }
+
+      &--table_heading {
+        font-size: 2rem;
+        display: block;
+        font-weight: bold;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        position: relative;
+        animation-timing-function: ease-in;
+        margin-bottom: 1rem;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: .4rem;
+          left: 15rem;
+          right: 6rem;
+          height: 0.5em;
+          border-top: 2px solid #FF0037;
+          z-index: 0;
+        }
+      }
+
+      &--form_heading {
+        font-size: 2rem;
+        display: block;
+        font-weight: bold;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: .4rem;
+          left: 17rem;
+          right: -17rem;
+          height: 0.5em;
+          border-top: 2px solid $color-red;
+          z-index: 0;
+        }
+      }
+
+      &--sub {
+        font-size: 2rem;
+        font-weight: normal;
+        color:#000;
+        letter-spacing: 0rem;
+        display: block;
+        animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+    }
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right,
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark, 0.8));
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
+    
+    &:hover {
+      transform: skewY(2deg) skewX(15deg) scale(1.1);
+      scale: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+  &:not(:last-child){
+    margin-bottom: 3rem ;
+  }
+}
+
+.form-text {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 21px;
+  color: $color-black;
+}
+
+.border_box_heading {
+  position: absolute;
+  top: -5rem;
+  left: -1.5rem;
+}

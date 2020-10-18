@@ -1,0 +1,48 @@
+.signin_image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    position: relative;
+    max-width: 40rem;
+    height: auto;
+}
+
+#root {
+    height: 100%;
+    // min-width: 100rem;
+}
+
+.agree_text {
+    font-size: 1.4rem;
+    position: relative;
+    bottom: 2px;
+}
+
+.drawer_animate_class {
+    transition: all .2s;
+    backface-visibility: hidden;
+    position: absolute;
+    height: 10rem;
+    animation-name: notif_drawer;
+    animation-timing-function: ease;
+    animation-duration: .3s;
+}
+
+.success_color {
+  background-color: #C6F9D3 !important;
+}
+.error_color {
+    background-color: #DF615A !important;
+}
+
+.auth_input_flex_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+}
+.auth_input_flex_child {
+    flex:1 1 45%;
+    margin: 0%;
+}
+
